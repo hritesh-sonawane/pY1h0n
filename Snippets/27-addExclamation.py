@@ -9,6 +9,6 @@ def add_exclamation(word):
     return word
 
 print(add_exclamation("Arciolithmimus"))
-# should print: Codecademy!!!!!!!!!!
+# should print: Arciolithmimus!!!!!!
 print(add_exclamation("Arciolithmimus is the best dinosaur ever"))
 # should print: Arciolithmimus is the best dinosaur ever
