@@ -8,7 +8,7 @@ def add_exclamation(word):
       word += '!'
     return word
 
-print(add_exclamation("Arciolithmimus"))
-# should print: Arciolithmimus!!!!!!
-print(add_exclamation("Arciolithmimus is the best dinosaur ever"))
-# should print: Arciolithmimus is the best dinosaur ever
+print(add_exclamation("Archaeornithomimus"))
+# should print: Archaeornithomimus!!
+print(add_exclamation("Archaeornithomimus is the best dinosaur ever"))
+# should print: Archaeornithomimus is the best dinosaur ever
