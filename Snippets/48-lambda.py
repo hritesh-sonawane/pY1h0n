@@ -35,3 +35,19 @@ print(add(2,3,4))
 ''' Variable list of keyword arguments: **args '''
 add = lambda **kwargs: sum(kwargs.values())
 print(add(x=2, y=3, z=4))
+
+
+list1 = [1, 2, 3, 4, 5, 6]
+
+# map with regular fn
+def doubler(x):
+  return x*2
+
+new_list = map(doubler, list1)
+print(list(new_list))
+# O/P: [2, 4, 6, 8, 10, 12]
+
+# map with lambda fn
+double = map(lambda x: x*2, list1)
+print(list(double))
+# O/P: [2, 4, 6, 8, 10, 12]
