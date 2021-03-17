@@ -94,3 +94,10 @@ x, y = findSquareCube(2)
 
 print(x)
 print(y)
+
+
+# if else
+findMin = lambda x, y: x if x < y else y
+
+print(findMin(2, 4))
+print(findMin('a', 'x'))
