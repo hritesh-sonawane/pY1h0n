@@ -60,7 +60,7 @@ def ageCheck(age):
     return True
   else:
     return False
-
+ 
 adults = filter(ageCheck, age)
 print(list(adults))
 # O/P: [19, 24, 42]
@@ -69,3 +69,20 @@ print(list(adults))
 adults = filter(lambda x: x > 18, age)
 print(list(adults))
 # O/P: [19, 24, 42]
+
+
+from functools import reduce
+lst = [10, 20, 30, 40]
+
+# reduce with reg fn
+def summer(a, b):
+    return a + b
+
+result = reduce(summer, lst)
+print(result)
+# O/P: 100
+
+# reduce with lambda fn
+result = reduce(lambda a, b: a + b, lst)
+print(result)
+# O/P: 100
