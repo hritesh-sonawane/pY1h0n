@@ -109,3 +109,14 @@ flatten = lambda l: [item for sublist in l for item in sublist]
 
 L = [[1, 2, 3], [4, 5, 6], [7], [8, 9]]
 print(flatten(L))
+
+
+# Lambda Jump table 
+# dictionary of functions
+exponent = {'square':lambda x: x ** 2, 'cube':lambda x: x ** 3}
+
+print(exponent['square'](3))
+# Prints 9
+
+print(exponent['cube'](3))
+# Prints 27
