@@ -86,3 +86,11 @@ print(result)
 result = reduce(lambda a, b: a + b, lst)
 print(result)
 # O/P: 100
+
+
+# Returning multiple values
+findSquareCube = lambda num: (num**2, num**3)
+x, y = findSquareCube(2)
+
+print(x)
+print(y)
