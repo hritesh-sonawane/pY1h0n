@@ -101,3 +101,11 @@ findMin = lambda x, y: x if x < y else y
 
 print(findMin(2, 4))
 print(findMin('a', 'x'))
+
+
+# List comprehension
+# Flatten a nested list with lambda
+flatten = lambda l: [item for sublist in l for item in sublist]
+
+L = [[1, 2, 3], [4, 5, 6], [7], [8, 9]]
+print(flatten(L))
