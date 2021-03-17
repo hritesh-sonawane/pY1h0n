@@ -120,3 +120,14 @@ print(exponent['square'](3))
 
 print(exponent['cube'](3))
 # Prints 27
+
+
+# Lambda key functions
+# Sort the list of tuples by the age of students not name
+L = [('Sam', 35),
+    ('Max', 25),
+    ('Bob', 30)]
+
+x = sorted(L, key=lambda x: x[1])
+print(x)
+# Prints [('Max', 25), ('Bob', 30), ('Sam', 35)]
