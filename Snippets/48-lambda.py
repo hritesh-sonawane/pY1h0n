@@ -148,3 +148,21 @@ def debug(func):
 print((debug(lambda x: x ** 2))(3))
 # Prints [DEBUG] Calling <lambda> with argument (3,) | Result: 9
 # Prints 9
+
+
+# # Closures
+# def multiplier(x):
+#   def inner_func(y):
+#       return x*y
+#   return inner_func
+
+# Lambda closure
+multiplier = (lambda x: (lambda y: x*y))
+
+doubler = multiplier(2)
+print(doubler(10))
+# Prints 20
+
+tripler = multiplier(3)
+print(tripler(10))
+# Prints 30
