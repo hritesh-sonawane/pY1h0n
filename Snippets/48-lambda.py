@@ -51,3 +51,21 @@ print(list(new_list))
 double = map(lambda x: x*2, list1)
 print(list(double))
 # O/P: [2, 4, 6, 8, 10, 12]
+
+
+age = [5, 11, 16, 19, 24, 42]
+# filter with reg fn
+def ageCheck(age):
+  if age > 18:
+    return True
+  else:
+    return False
+
+adults = filter(ageCheck, age)
+print(list(adults))
+# O/P: [19, 24, 42]
+
+# filter with lambda fn
+adults = filter(lambda x: x > 18, age)
+print(list(adults))
+# O/P: [19, 24, 42]
