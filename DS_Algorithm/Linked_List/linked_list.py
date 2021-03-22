@@ -31,7 +31,7 @@ class LinkedList:
         current_node = self.get_head_node()
         while current_node:
             if current_node.get_value() != None:
-                string_list += str(current_node.get_value()) + "\n"
+                string_list += str(current_node.get_value()) + " | "
             current_node = current_node.get_next_node()
         return string_list
 
@@ -49,11 +49,11 @@ class LinkedList:
                     current_node = next_node
   
 
-ll = LinkedList(5)
-ll.insert_beginning(70)
-ll.insert_beginning(5675)
-ll.insert_beginning(90)
+ll = LinkedList(1)
+ll.insert_beginning(2)
+ll.insert_beginning(3)
+ll.insert_beginning(4)
 print(ll.stringify_list())
-ll.remove_node(90)
-ll.remove_node(5)
+ll.remove_node(4)
+ll.remove_node(2)
 print(ll.stringify_list())
