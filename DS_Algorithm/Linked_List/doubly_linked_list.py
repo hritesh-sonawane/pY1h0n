@@ -27,7 +27,7 @@ class DoublyLinkedList:
         self.tail_node = None
 
     def add_to_head(self, new_value):
-        new_head = Node(self.new_value)
+        new_head = Node(new_value)
         current_head = self.head_node
 
         if current_head != None:
@@ -37,3 +37,15 @@ class DoublyLinkedList:
 
         if self.tail_node == None:
             self.tail_node = new_head
+
+    def add_to_tail(self, new_value):
+        new_tail = Node(new_value)
+        current_tail = self.tail_node
+
+        if current_tail != None:
+            current_tail.set_next_node(new_tail)
+            new_tail.set_prev_node(current_tail)
+        self.tail_node = new_tail
+
+        if self.head_node == None:
+            self.head_node = new_tail
