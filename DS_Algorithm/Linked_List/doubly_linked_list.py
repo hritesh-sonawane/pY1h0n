@@ -103,7 +103,7 @@ class DoublyLinkedList:
 
         elif node_to_remove == self.tail_node:
             self.remove_tail()
-            
+
         else:
             next_node = node_to_remove.get_next_node()
             prev_node = node_to_remove.get_prev_node()
@@ -111,3 +111,11 @@ class DoublyLinkedList:
             prev_node.set_next_node(next_node)
         
         return node_to_remove
+
+    def stringify_list(self):
+        string_list = ""
+        current_node = self.head_node
+
+        while current_node:
+            if current_node.get_value() != None:
+                string_list += str(current_node.get_value()) + " | "
