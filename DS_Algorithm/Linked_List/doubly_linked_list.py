@@ -119,3 +119,5 @@ class DoublyLinkedList:
         while current_node:
             if current_node.get_value() != None:
                 string_list += str(current_node.get_value()) + " | "
+            current_node = current_node.get_next_node()
+        return string_list
