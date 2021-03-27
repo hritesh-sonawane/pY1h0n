@@ -48,12 +48,13 @@ class LinkedList:
                 else:
                     current_node = next_node
   
-
-ll = LinkedList(1)
-ll.insert_beginning(2)
-ll.insert_beginning(3)
-ll.insert_beginning(4)
-print(ll.stringify_list())
-ll.remove_node(4)
-ll.remove_node(2)
-print(ll.stringify_list())
+if __name__ == '__main__':
+    print(__name__)
+    ll = LinkedList(1)
+    ll.insert_beginning(2)
+    ll.insert_beginning(3)
+    ll.insert_beginning(4)
+    print(ll.stringify_list())
+    ll.remove_node(4)
+    ll.remove_node(2)
+    print(ll.stringify_list())
