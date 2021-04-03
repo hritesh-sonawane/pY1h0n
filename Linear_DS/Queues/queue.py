@@ -11,7 +11,7 @@ class Queue:
         if self.size > 0:
             return self.head.get_value()
         else:
-            print("Nothing to see here")
+            print("Nothing to see here!")
 
     def get_size(self):
         return self.size
@@ -39,7 +39,21 @@ class Queue:
         else:
             print("Sorry, no more room!")
 
+    def dequeue(self):
+        if self.get_size() > 0:
+            item_to_remove = self.head
+            print("Removing " + str(item_to_remove.get_value()) + " from the queue!")
+            if self.get_size() == 1:
+                self.head = None
+                self.tail = None
+            else:
+                self.head = self.head.get_next_node()
+            self.size -= 1
+            return item_to_remove.get_value()
+        else:
+            print("This queue is totally empty!")
+
 
 q = Queue()
-q.enqueue("all the fluffy kitties")
-q.enqueue("all the fluffy kitties")
+q.enqueue(224)
+q.dequeue()
