@@ -24,3 +24,21 @@ class Queue:
 
     def is_empty(self):
         return self.size == 0
+
+    def enqueue(self, value):
+        if self.has_space():
+            item_to_add = Node(value)
+            print("Adding " + str(item_to_add.get_value()) + " to the queue!")
+            if self.is_empty():
+                self.head = item_to_add
+                self.tail = item_to_add
+            else:
+                self.set_next_node(item_to_add)
+                self.tail = item_to_add
+            self.size += 1
+        else:
+            print("Sorry, no more room!")
+
+
+q = Queue()
+q.enqueue("all the fluffy kitties")
