@@ -21,3 +21,9 @@ class HashMap:
     def retrieve(self, key):
         array_index = self.compressor(self.hash(key))
         return self.array[array_index]
+
+
+# Testing
+hash_map = HashMap(20)
+hash_map.assign("Rock Lee", "Taijutsu")
+print(hash_map.retrieve("Rock Lee"))
