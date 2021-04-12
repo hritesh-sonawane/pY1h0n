@@ -8,3 +8,6 @@ class HashMap:
         # .encode() is a string method that converts a string into its corresponding bytes
         hash_code = sum(key_bytes)
         return hash_code
+
+    def compressor(self, hash_code):
+        return hash_code % self.array_size
