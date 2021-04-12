@@ -11,3 +11,8 @@ class HashMap:
 
     def compressor(self, hash_code):
         return hash_code % self.array_size
+
+    # setter function
+    def assign(self, key, value):
+        array_index = self.compressor(self.hash(key))
+        self.array[array_index] = value
