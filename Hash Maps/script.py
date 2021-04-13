@@ -13,9 +13,18 @@ class HashMap:
         return hash_code % self.array_size
 
     # setter function
+    # Collisions: This is when two different keys resolve to the same array index.
     def assign(self, key, value):
         array_index = self.compressor(self.hash(key))
-        self.array[array_index] = value
+        current_array_value = self.array[array_index]
+
+        if current_array_value is None:
+            self.array[array_index] = [key, value]
+        return
+
+        if current_array_value[0] == key:
+            self.array[array_index] = [key, value]
+        return
 
     # getter function
     def retrieve(self, key):
