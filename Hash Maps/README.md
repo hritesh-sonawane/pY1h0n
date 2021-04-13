@@ -1,3 +1,5 @@
+# Hash Maps
+
 - Hash map: A key-value store that uses an array and a hashing function to save and retrieve values.
 - Key: The identifier given to a value for later retrieval.
 - Hash function: A function that takes some input and returns a number.
