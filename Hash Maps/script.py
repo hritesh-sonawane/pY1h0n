@@ -26,6 +26,27 @@ class HashMap:
             self.array[array_index] = [key, value]
         return
 
+        # Collision!
+
+        number_collisions = 1
+
+        while(current_array_value[0] != key):
+            new_hash_code = self.hash(key, number_collisions)
+            new_array_index = self.compressor(new_hash_code)
+            current_array_value = self.array[new_array_index]
+
+            if current_array_value is None:
+                self.array[new_array_index] = [key, value]
+            return
+
+            if current_array_value[0] == key:
+                self.array[new_array_index] = [key, value]
+            return
+
+            number_collisions += 1
+
+        return
+
     # getter function
     # When we retrieve hash map values, we also need to be aware of the fact that two keys could point to the same array index.
     def retrieve(self, key):
