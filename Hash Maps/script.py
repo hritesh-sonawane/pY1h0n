@@ -3,11 +3,11 @@ class HashMap:
         self.array_size = array_size
         self.array = [None for item in range(array_size)]
 
-    def hash(self, key):
+    def hash(self, key, count_collisions=0):
         key_bytes = key.encode()
         # .encode() is a string method that converts a string into its corresponding bytes
         hash_code = sum(key_bytes)
-        return hash_code
+        return hash_code + count_collisions
 
     def compressor(self, hash_code):
         return hash_code % self.array_size
@@ -31,7 +31,7 @@ class HashMap:
     def retrieve(self, key):
         array_index = self.compressor(self.hash(key))
         possible_return_value = self.array[array_index]
-        
+
         if possible_return_value is None:
             return None
         elif possible_return_value[0] == key:
