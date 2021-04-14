@@ -80,4 +80,8 @@ class HashMap:
 # Testing
 hash_map = HashMap(20)
 hash_map.assign("Rock Lee", "Taijutsu")
+hash_map.assign("Itachi Uchiha", "Genjutsu")
+hash_map.assign("Kakashi Hatake", "Ninjutsu")
 print(hash_map.retrieve("Rock Lee"))
+print(hash_map.retrieve("Itachi Uchiha"))
+print(hash_map.retrieve("Kakashi Hatake"))
