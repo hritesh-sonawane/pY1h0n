@@ -27,9 +27,15 @@ class HashMap:
         return
 
     # getter function
+    # When we retrieve hash map values, we also need to be aware of the fact that two keys could point to the same array index.
     def retrieve(self, key):
         array_index = self.compressor(self.hash(key))
-        return self.array[array_index]
+        possible_return_value = self.array[array_index]
+        
+        if possible_return_value is None:
+            return None
+        elif possible_return_value[0] == key:
+            return possible_return_value[1]
 
 
 # Testing
