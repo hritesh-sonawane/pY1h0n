@@ -9,6 +9,10 @@ def sum_to_one(n):
         n -= 1
         print(call_stack)
     print("BASE CASE REACHED")
+    while len(call_stack) != 0:
+        return_value = call_stack.pop()
+        print("Return value of {0} adding to result {1}".format(return_value['n_value'], result))
+        result += return_value['n_value']
     return result, call_stack
 
 sum_to_one(4)
